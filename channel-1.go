@@ -6,11 +6,11 @@ func sendone(i int, c chan int) {
 }
 
 func main() {
-	s := make(chan int, 10)
+	s := make(chan int)
 	fmt.Println(len(s))
 	fmt.Println(cap(s))
 
-	go sendone(10, c)
+	go sendone(20, s)
 	fmt.Println(len(s))
 	fmt.Println(cap(s))
 }

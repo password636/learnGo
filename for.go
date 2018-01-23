@@ -6,6 +6,6 @@ func main() {
 	for i := 0; i < 10; i++ {
 		sum += i
 	}
-	//fmt.Println(i)
+	// fmt.Println(i) // undefined: i
 	fmt.Println(sum)
 }
