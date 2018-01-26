@@ -9,7 +9,7 @@ type TimerStruct struct {
 }
 
 func MyTimer(d time.Duration) *TimerStruct {
-	c := make(chan int, 1)
+	c := make(chan int)
 	t := &TimerStruct{
 		C: c,
 	}

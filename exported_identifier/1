@@ -5,7 +5,7 @@ var V = 9						// V exported
 var w = 19						// w not exported
 
 var St = struct {
-	X, y int	// X and Y are exported identifiers
+	X, Y int	// X and Y are exported identifiers
 }{3,4}
 
 type MyT struct {
@@ -16,7 +16,7 @@ func (st MyT)GetX() int{	// GetX exported
 	return st.X
 }
 
-func (st MyT)getY() int{	// getY 
+func (st MyT)getY() int{	// getX exported
 	return st.Y
 }
 
@@ -24,9 +24,7 @@ func Add(x float64) float64{	// Add exported
 	var Sd = struct {
 		X, Y int
 	}{3,4}
-	const Pa float64 = 3.15
-
-	return float64(Sd.X)+Pa
-	//return Sd.X+Pa
+	const Pa int = 315
+	return Sd+Pa
 }
 
