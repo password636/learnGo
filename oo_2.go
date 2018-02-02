@@ -5,7 +5,9 @@ import "fmt"
 type I interface {
 	myfunc() float64
 }
-
+type J interface {
+	yourfunc() float64
+}
 type T int
 func (t T) myfunc() float64{
 	return 0.0
@@ -20,15 +22,17 @@ type P interface {
 }
 
 func do(i interface{}) {
-	switch i.(type) {		// not necessarily v := i.(type)
+	switch i.(type) {		
 		case int:
 			fmt.Println("int")
-		//case T:				// match
-		//	fmt.Println("T")
-		case P:				// also match
-			fmt.Println("P implements interface")	 
-		case I:				// also match
-			fmt.Println("T implements interface")	 
+		case T:			// match
+			fmt.Println("concrete type is T")
+		case P:			// also match
+			fmt.Println("T implements P")	 
+		case I:			// also match
+			fmt.Println("T implements I")	 
+		case J:			// no match		
+			fmt.Println("T implements J")	 
 		default:
 			fmt.Println("I don't know the type\n")
 	}
