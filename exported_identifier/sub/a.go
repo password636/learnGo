@@ -8,6 +8,10 @@ var St = struct {
 	X, y int	// X and Y are exported identifiers
 }{3,4}
 
+type MyIf interface {
+	SampleM()
+} 
+
 type MyT struct {
 	X, Y int
 }
