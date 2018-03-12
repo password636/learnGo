@@ -25,6 +25,8 @@ func (st MyT)getY() int{	// getY
 }
 
 func Add(x float64) float64{	// Add exported
+    var DDD = 100.0
+    return DDD
 	var Sd = struct {
 		X, Y int
 	}{3,4}

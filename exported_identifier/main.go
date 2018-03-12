@@ -17,5 +17,6 @@ func main() {
 	//fmt.Println(vara.getY())
 	//fmt.Println(sub.St.y)
 	//fmt.Println(sub.w)
-	fmt.Println(sub.Sd.X)
+	//fmt.Println(sub.Sd.X)
+	fmt.Println(sub.DDD)
 }
