@@ -2,10 +2,11 @@ package main
 import ("fmt")
 
 func fuck() (result int) {
-    defer func() {
-        result += 11
-    }()
-    return 20
+     tit := 5
+     defer func() {
+       tit = tit + 26
+     }()
+     return tit
 }
 
 func main () {
