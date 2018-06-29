@@ -7,8 +7,8 @@ func main () {
 		"hello":10,
 	}
 	var i string
-	var j int
-	for i,j = range m {
-		fmt.Println(i,j)
+//	var j int
+	for i = range m {
+		fmt.Println(i)
 	}
 }
